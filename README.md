@@ -5,9 +5,9 @@
 
 ###[显卡安装](https://wiki.gentoo.org/wiki/Intel)
 ###内核选项
-  make defconfig
+    make defconfig
   
-  make menuconfig
+    make menuconfig
   
 
 ###[输入输出设备](https://wiki.gentoo.org/wiki/Synaptics)
