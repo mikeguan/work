@@ -17,4 +17,5 @@
 
 
 [android arm install arch](http://archlinuxarm.org/forum/viewtopic.php?f=27&t=1361&start=40)
+
 [boot debian with X and wifi from SD card](http://forum.xda-developers.com/showthread.php?t=631389)
