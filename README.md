@@ -14,3 +14,6 @@
 ###[桌面环境安装](https://wiki.gentoo.org/wiki/Evdev)
 ###[其他](https://wiki.gentoo.org/wiki/X_server)
 ###[网络配置](https://wiki.gentoo.org/wiki/NetworkManager)
+
+
+[android arm install arch](http://archlinuxarm.org/forum/viewtopic.php?f=27&t=1361&start=40)
