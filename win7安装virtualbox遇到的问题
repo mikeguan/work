@@ -1,0 +1,21 @@
+#问题1：无法创建unbuntu 64bit 虚拟机
+          安装完virtualbox后，新建虚拟机。类型选择为Linux时，版本下拉选项只有ubuntu 32bit，无ubuntu 64bit。
+##原因
+     64 bit 的虚拟机需要硬件虚拟化支持，而BIOS 默认将它关闭了。
+##解决方案
+     重启计算机，按F2进入BIOS设置
+     在CPU设置下面，将“Intel虚拟化技术”状态设置为打开，保存并退出，重启计算机。
+     再进入virtualbox就可以看到ubuntu 64bit这个选项了。
+
+#问题2：virtualbox不能为虚拟电脑启动一个新任务
+     错误详情如下：
+      Unable to load R3 module C:\Program Files\Oracle\VirtualBox/VBoxDD.DLL (VBoxDD): GetLastError=1790 (VERR_UNRESOLVED_ERROR).
+     返回 代码:E_FAIL (0x80004005)
+     组件:Console
+     界面:IConsole {8ab7c520-2442-4b66-8d74-4ff1e195d2b6}
+##原因
+      宿主机win7用的ghost系统，会破解uxtheme.dll文件，导致virtualbox启动失败
+##解决方案
+      使用原版的uxtheme.dll替换c:\windows\system32\uxtheme.dll即可。
+#补充
+     这个问题，很多网友都遇到。有的启动失败，是因为VBoxDD.dll的文件路径包含了中文。而我遇到的问题时因为uxtheme.dll文件错误。这个问题的详细说明请参考[这篇博文](http://www.dotcoo.com/virtualbox-uxtheme)
