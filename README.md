@@ -2,6 +2,7 @@
 #gentoo install
 ====
 ##基本系统安装
+zsfQyxttC9du
 
 ###[显卡安装](https://wiki.gentoo.org/wiki/Intel)
 ###内核选项
