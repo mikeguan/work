@@ -1,6 +1,7 @@
 #代码
 `time echo "scale=5000; 4*a(1)" | bc -l -q`
 
+tar cvpzf gentoo.tgz --exclude=/proc --exclude=/sys --exclude=/dev --exclude=/lost+found --exclude=/run --exclude=/tmp --exclude=/test /
 
 **************************************************************
 KiwiVM Task File, executed: Wed, 22 Apr 2015 02:24:19 -0400
