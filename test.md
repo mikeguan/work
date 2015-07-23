@@ -1,4 +1,12 @@
 #代码
+----
+newBmp = new Bitmap(bmp1.Width, bmp1.Height+bmp2.Height);
+g = Graphics.FromImage(newBmp)
+g.DrawImage(bmp1, 0, 0);
+g.DrawImage(bmp2, 0, bmp1.Height)
+save(newBmp)
+----
+
 `time echo "scale=5000; 4*a(1)" | bc -l -q`
 
 tar cvpzf gentoo.tgz --exclude=/proc --exclude=/sys --exclude=/dev --exclude=/lost+found --exclude=/run --exclude=/tmp --exclude=/test /
