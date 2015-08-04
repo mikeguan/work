@@ -33,3 +33,7 @@ int lastDayOfNextMonth = DateTime.DaysInMonth(nextMonth.Year, nextMonth.Month); 
 ```
 int theMonth = ((System.DateTime)periodStartDate).AddMonths(1).Month;
 ```
+
+
+
+[jqGrid使用记录](http://www.cnblogs.com/kissdodog/p/3875992.html)
