@@ -37,3 +37,6 @@ int theMonth = ((System.DateTime)periodStartDate).AddMonths(1).Month;
 
 
 [jqGrid使用记录](http://www.cnblogs.com/kissdodog/p/3875992.html)
+
+
+[手机安装google play应用](http://www.zhihu.com/question/20232626)
