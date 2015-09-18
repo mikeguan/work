@@ -1,6 +1,6 @@
 ###bash 特殊字符 
 
-    [原网页地址](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html)
+[原网页地址](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html)
 
 ```
 - Position the Cursor:
