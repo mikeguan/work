@@ -1,3 +1,6 @@
+sql有关时间的查询语句
+----------------------------
+
 今天 
 ```
 select * from 表名 where to_days(时间字段名) = to_days(now());  
