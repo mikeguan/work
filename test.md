@@ -10,6 +10,10 @@ save(newBmp)
 `time echo "scale=5000; 4*a(1)" | bc -l -q`
 
 acpi PNP0A08:00: _OSC failed (AE_ERROR); disabling ASPM
+pci 0000:01:00.0: BAR 6: failed to assign [mem size 0x00080000 pref]
+acer_wmi: Enabling Launch Manager failed: 0xe2 - 0x0
+[drm] failed to retrieve link info, disabling eDP
+ACPI: \_SB_.PCI0.PEG0.PEGP: failed to evaluate _DSM
 
 
 tar cvpzf gentoo.tgz --exclude=/proc --exclude=/sys --exclude=/dev --exclude=/lost+found --exclude=/run --exclude=/tmp --exclude=/test /
