@@ -9,6 +9,9 @@ save(newBmp)
 
 `time echo "scale=5000; 4*a(1)" | bc -l -q`
 
+acpi PNP0A08:00: _OSC failed (AE_ERROR); disabling ASPM
+
+
 tar cvpzf gentoo.tgz --exclude=/proc --exclude=/sys --exclude=/dev --exclude=/lost+found --exclude=/run --exclude=/tmp --exclude=/test /
 
 **************************************************************
