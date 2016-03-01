@@ -9,6 +9,11 @@ save(newBmp)
 
 `time echo "scale=5000; 4*a(1)" | bc -l -q`
 
+理解为远程桌面时用键盘怎么打开远程计算机的任务管理器，而不是打开本机的任务管理器。
+用Ctrl+ Shift+Esc组合键打开；
+和操作本机一样，在远程计算机的任务栏上点右键，在弹出的菜单中点“任务管理器”；
+在远程计算机点“开始”菜单，在运行里面输入"taskmgr"然后回车即可。
+
 acpi PNP0A08:00: _OSC failed (AE_ERROR); disabling ASPM
 
 
