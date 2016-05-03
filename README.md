@@ -20,4 +20,5 @@
 [在线portage查询](http://www.portagefilelist.de/site/query)
 
 [booting live iso image](http://askubuntu.com/questions/141940/how-to-boot-live-iso-images)
+
 [grub](https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
