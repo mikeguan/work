@@ -43,10 +43,6 @@ libgvc.pc
 libgvpr.pc
 libical.pc
 libidn.pc
-libiso9660.pc
-libiso9660++.pc
-libKActivities.pc
-libKF5Attica.pc
 liblz4.pc
 libmng.pc
 libmnl.pc
@@ -68,7 +64,6 @@ libssh_threads.pc
 libudf.pc
 libuniconf.pc
 libusb-1.0.pc
-libxdg-basedir.pc
 libxdot.pc
 lvm2app.pc
 mad.pc
@@ -95,17 +90,9 @@ speexdsp.pc
 speex.pc
 synctex.pc
 teckit.pc
-texlua52.pc
-texluajit.pc
 trapproto.pc
 udisks2.pc
 upower-glib.pc
 vo-aacenc.pc
-Wand-6.Q16.pc
 xapian-core-1.3.pc
 xf86rushproto.pc
-zzipfseeko.pc
-zziplib.pc
-zzipmmapped.pc
-zzipwrap.pc
-zzip-zlib-config.pc
