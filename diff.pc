@@ -75,17 +75,14 @@ printproto.pc
 ptexenc.pc
 pthread-stubs.pc
 pwquality.pc
-samplerate.pc
-SDL_rwops_zzip.pc
-slang.pc
+samplerate.pc libsamplerate-0.1.8
 sndfile.pc
 speexdsp.pc
 speex.pc
 synctex.pc
 teckit.pc
 trapproto.pc
-udisks2.pc
+udisks2.pc  UDisks-2.1.6
 upower-glib.pc
 vo-aacenc.pc
 xapian-core-1.3.pc
-xf86rushproto.pc
