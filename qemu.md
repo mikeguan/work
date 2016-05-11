@@ -21,17 +21,6 @@ qemu支持的选项很多很专业,这里先这么用.注意,如果用图形界�
 ➜  ~  bin/start_gentoo.sh -boot d -cdrom bin/install-x86-minimal-20141209.iso  -redir tcp:50022::22 
 在Guest机器上,就可以使用
 net-setup enp0s3来dhcp配置网络,设置root密码,然后启动sshd服务进行配置.那么,接下来就可以在Host机器上ssh连接了
-➜  ~  ssh -p 50022 root@localhost
-The authenticity of host '[localhost]:50022 ([127.0.0.1]:50022)' can't be established.
-ED25519 key fingerprint is 15:fe:d2:46:3b:e7:c6:82:59:19:39:30:9b:64:e2:d0.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added '[localhost]:50022' (ED25519) to the list of known hosts.
-Password: 
-注意::: 这里不要想用PING来检测网络是否通,因为手册说了,只转发TCP UDP的数据包,ICMP是不行的,所以PING网络是不通的,但是实际的数据通信是没有问题的.
-对于network user来说,默认的得到的网络信息是
-Ipaddr:10.0.2.1
-Gateway:10.0.2.2
-DNS:10.0.2.3
 
 4.上面的-net user是走NAT的，所以VM对于外网是不可以见的。如果需要Guest对外部可见,就需要使用桥接，根据手册有一个简单的配置方法:
 对于HOST主机，由于使用了systemd，所以配置自动桥接如下：
@@ -181,9 +170,3 @@ initramfs.img          System.map-4.2.0-rc7+.old
 ➜  INSTALL_PATH qemu-system-x86_64 -enable-kvm -cpu host -smp 2,sockets=1 -drive file=Fedora.img,if=virtio,cache=writethrough   -serial telnet:127.0.0.1:4444,server -kernel ~/Study/GitHub/INSTALL_PATH/vmlinuz-4.2.0-rc7+ -initrd ~/Study/GitHub/INSTALL_PATH/initramfs.img -append "root=/dev/vda1 init=/usr/lib/systemd/systemd console=uart8250,io,0x3f8 debug ignore_loglevel"
 
 ➜  INSTALL_PATH telnet 127.0.0.1 4444
-
-
-
-
-Enjoy your kernel life!
-Nicol TAO
