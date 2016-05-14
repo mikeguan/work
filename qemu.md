@@ -1,10 +1,10 @@
+[Documentation/Networking](http://wiki.qemu.org/Documentation/Networking)
+```
+qemu -enable-kvm -machine smm=off -boot order=d -m 1G,slots=3,maxmem=2G -soundhw es1370 -cpu host -smp cores=1,threads=2 -vga vmware -hda vdisk.img -net nic,model=rtl8139 -net user
+```
+
 1.为了支持多构架,在make.conf中设置QEMU支持的虚拟机类型.其它的构架还没有尝试过,不过至少支持x86和x86_64两种构架
 QEMU_SOFTMMU_TARGETS="x86_64 i386 arm mips mips64 mips64el mipsel"
-
-2.创建磁盘文件.
-磁盘镜像格式有raw,cow,qcow,qcow2,vmdk,vdi等格式,读者可以自行比较.总体来说，qcow2支持COW，快照，磁盘压缩，使用起来性能不错,而且可以转换成raw格式，所以推荐之.
-➜  Machines  qemu-img create -f qcow2 gentoo.img 40G
-Formatting 'gentoo.img', fmt=qcow2 size=42949672960 encryption=off cluster_size=65536 lazy_refcounts=off 
 
 3.编写启动文件
 ➜  ~  cat bin/start_gentoo.sh 
