@@ -40,3 +40,20 @@ int theMonth = ((System.DateTime)periodStartDate).AddMonths(1).Month;
 
 
 [手机安装google play应用](http://www.zhihu.com/question/20232626)
+
+```
+SELECT 
+DATE(begin_time) AS `Date`,
+CASE 
+WHEN TIME(begin_time) >= '00:00:00' AND TIME(begin_time) < '01:00:00' THEN '00:00:00 - 01:00:00' 
+WHEN TIME(begin_time) >= '01:00:00' AND TIME(begin_time) < '02:00:00' THEN '01:00:00 - 02:00:00' 
+/*...and so on...*/
+END AS `TimeSlot`,
+COUNT(id) as reservations
+FROM reservation
+WHERE begin_time > '" . $from . "'
+AND end_time < '" . $until . "'
+GROUP BY `Date`, `TimeSlot`
+```
+
+
