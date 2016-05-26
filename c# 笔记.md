@@ -57,3 +57,10 @@ GROUP BY `Date`, `TimeSlot`
 ```
 
 
+```
+SELECT A.TIME1,B.YU_JIAN_CHE_LIANG_SHU FROM 
+(SELECT DATE_FORMAT(DATE_FORMAT(now(),'%Y-%m-%d') - INTERVAL numlist.id HOUR,'%Y-%m-%d %H') as TIME1 from (SELECT n1.i*8 + n2.i*80 as id from num n1 cross join num as n2) as numlist) A
+LEFT JOIN (SELECT CONCAT(date_format(YU_JIAN_JIAN_CE_SHI_JIAN,'%Y-%m-%d'),case when date_format(YU_JIAN_JIAN_CE_SHI_JIAN,'%H') < 8 then ' 00' when date_format(YU_JIAN_JIAN_CE_SHI_JIAN,'%H') < 16 then ' 08' else ' 16' end) as TIME1,
+COUNT(*) as YU_JIAN_CHE_LIANG_SHU FROM ZCJL_R_YJSJB B WHERE YU_JIAN_JIAN_CE_SHI_JIAN > '2016-05-01' AND YU_JIAN_JIAN_CE_SHI_JIAN < '2016-05-30'
+GROUP BY TIME1 ORDER BY YU_JIAN_JIAN_CE_SHI_JIAN) B on A.TIME1 = B.TIME1
+```
