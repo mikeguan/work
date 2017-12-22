@@ -1,3 +1,5 @@
+[https://gist.github.com/lanceliao/3099caed8750911dfe58](https://gist.github.com/lanceliao/3099caed8750911dfe58)
+
 1. 开启ipv4转发
 ```
 vi /etc/sysctl.conf
