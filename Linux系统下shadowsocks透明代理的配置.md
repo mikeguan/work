@@ -130,7 +130,8 @@ dnsmasq只将被污染的域名请求发给pdnsd处理，其他的由于dnsmasq�
   
  
  shadowsocks.service
- [Unit]
+```
+[Unit]
 Description=shadowsocks proxy service
 After=network.target
 
@@ -144,8 +145,10 @@ RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
+```
 
 shadowsocks.sh
+```
 #!/bin/bash
 # Shell scripts to control shadowsocks proxy on Linux
 # Author:	Lance Liao	http://www.shuyz.com
@@ -322,3 +325,4 @@ else
 fi
 
 exit 0
+```
